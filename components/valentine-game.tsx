@@ -55,9 +55,8 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
   };
 
   const handleNoClick = () => {
-    // Alert popup as requested
-    alert("Are you sure? Think again 😉");
-    handleNoHover(); // Move it again
+    // Just move the button, no popup
+    handleNoHover();
   };
 
   const handleYesClick = () => {
