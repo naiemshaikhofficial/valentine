@@ -150,7 +150,7 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
         <FloatingHearts count={60} />
         <CelebrationEffects />
 
-        <div className="bg-black/70 rounded-[1.5rem] md:rounded-[2rem] shadow-[0_0_60px_rgba(255,0,0,0.6)] p-5 md:p-10 backdrop-blur-xl border-2 border-red-500/50 text-center relative overflow-hidden">
+        <div className="bg-black/70 rounded-[1.5rem] md:rounded-[2rem] shadow-[0_0_60px_rgba(255,0,0,0.6)] p-5 md:p-10 pb-10 md:pb-14 backdrop-blur-xl border-2 border-red-500/50 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 to-pink-600/20 pointer-events-none animate-pulse"></div>
 
           <div className="mb-6 animate-bounce-in relative">

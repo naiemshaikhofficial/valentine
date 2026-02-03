@@ -10,34 +10,34 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="fixed bottom-0 w-full p-4 z-50 pointer-events-none">
-            <div className="container mx-auto flex flex-col items-center justify-center gap-2 pointer-events-auto">
-                <div className="flex items-center justify-center gap-2 text-sm md:text-base font-medium text-white/90 backdrop-blur-sm bg-black/40 px-4 py-2 rounded-full shadow-[0_0_15px_rgba(255,0,0,0.2)] border border-red-500/30 hover:bg-black/60 transition-colors">
+        <footer className="absolute bottom-2 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
+            <div className="flex flex-col items-center justify-center gap-1 pointer-events-auto">
+                <div className="flex items-center justify-center gap-1.5 text-[10px] md:text-xs font-medium text-white/80 backdrop-blur-md bg-black/50 px-2.5 py-1 rounded-full border border-red-500/20">
                     <span>Made By</span>
                     <a
                         href="https://www.techtradeenterprises.site/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-bold text-red-500 hover:text-red-400 font-pacifico text-lg transition-colors drop-shadow-[0_0_10px_rgba(255,0,0,0.5)]"
+                        className="font-bold text-red-400 hover:text-red-300 font-pacifico text-xs md:text-sm transition-colors"
                     >
                         Tech Trade Enterprises
                     </a>
-                    <span className="flex items-center gap-1">
-                        With <Heart className="w-4 h-4 text-red-600 fill-red-600 animate-pulse-heart filter drop-shadow-[0_0_5px_rgba(255,0,0,1)]" />
+                    <span className="flex items-center gap-0.5">
+                        With <Heart className="w-2.5 h-2.5 text-red-500 fill-red-500" />
                     </span>
                 </div>
 
-                <div className="flex gap-4 backdrop-blur-sm bg-black/40 px-6 py-2 rounded-full shadow-[0_0_15px_rgba(255,0,0,0.2)] border border-red-500/30">
+                <div className="flex gap-2 backdrop-blur-md bg-black/50 px-3 py-1 rounded-full border border-red-500/20">
                     {socialLinks.map((social) => (
                         <a
                             key={social.label}
                             href={social.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-red-500/80 hover:text-red-500 hover:scale-125 transition-all duration-300 filter hover:drop-shadow-[0_0_10px_rgba(255,0,0,0.8)]"
+                            className="text-red-400/70 hover:text-red-400 hover:scale-110 transition-all duration-300"
                             aria-label={social.label}
                         >
-                            <social.icon className="w-5 h-5" />
+                            <social.icon className="w-3.5 h-3.5" />
                         </a>
                     ))}
                 </div>
