@@ -234,14 +234,17 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
           <button
             ref={noButtonRef}
             onMouseEnter={handleNoHover}
+            onMouseOver={handleNoHover}
+            onPointerEnter={handleNoHover}
             onTouchStart={handleNoHover}
+            onFocus={handleNoHover}
             onClick={handleNoClick}
-            className="fixed px-6 h-12 md:h-14 text-base md:text-lg font-bold bg-slate-800 hover:bg-slate-700 text-slate-400 rounded-2xl transition-all duration-200 ease-out z-50 font-pacifico border border-slate-600 hover:rotate-12 hover:scale-75"
+            className="fixed px-6 h-12 md:h-14 text-base md:text-lg font-bold bg-slate-800 hover:bg-slate-700 text-slate-400 rounded-2xl transition-all duration-200 ease-out z-50 font-pacifico border border-slate-600"
             style={{
               left: noButtonPos.x === 0 ? 'auto' : `${noButtonPos.x}px`,
               top: noButtonPos.y === 0 ? 'auto' : `${noButtonPos.y}px`,
               pointerEvents: 'auto',
-              transform: noButtonPos.x === 0 && noButtonPos.y === 0 ? 'translateX(120%)' : `rotate(${Math.random() * 360}deg)`,
+              transform: noButtonPos.x === 0 && noButtonPos.y === 0 ? 'translateX(120%)' : `rotate(${Math.random() * 30 - 15}deg)`,
             }}
           >
             NO 😏
