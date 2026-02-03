@@ -19,6 +19,7 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
   const [currentStep, setCurrentStep] = useState<GameStep>('intro');
   const [noButtonPos, setNoButtonPos] = useState({ x: 0, y: 0 });
   const [compatibility, setCompatibility] = useState(0);
+  const [shake, setShake] = useState(false);
   const noButtonRef = useRef<HTMLButtonElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -60,7 +61,10 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
   };
 
   const handleYesClick = () => {
-    setCurrentStep('accepted');
+    setShake(true);
+    setTimeout(() => {
+      setCurrentStep('accepted');
+    }, 500);
   };
 
   const handleCopy = () => {
@@ -206,14 +210,14 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-xl z-10 animate-in fade-in zoom-in-95 duration-500"
+      className={`relative w-full max-w-xl z-10 animate-in fade-in zoom-in-95 duration-500 ${shake ? 'animate-shake' : ''}`}
     >
-      <FloatingHearts count={30} />
+      <FloatingHearts count={50} />
 
       <div className="bg-black/60 rounded-[2.5rem] shadow-[0_0_40px_rgba(255,0,0,0.4)] p-8 md:p-12 backdrop-blur-md border border-red-500/30 relative overflow-hidden transition-all duration-500 hover:shadow-[0_0_60px_rgba(255,0,0,0.6)]">
         <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-red-900/20 pointer-events-none"></div>
 
-        <h1 className="relative text-5xl md:text-6xl font-bold text-white text-center mb-12 font-pacifico drop-shadow-[0_0_10px_rgba(255,0,0,0.8)] leading-tight">
+        <h1 className="relative text-5xl md:text-6xl font-bold text-white text-center mb-12 font-pacifico drop-shadow-[0_0_10px_rgba(255,0,0,0.8)] leading-tight animate-wobble">
           Will you be my Valentine, <br /> {theirName}? 🌹
         </h1>
 
@@ -222,7 +226,7 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
           {/* Yes Button */}
           <Button
             onClick={handleYesClick}
-            className="absolute left-1/2 -translate-x-1/2 px-12 h-20 md:h-24 text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-[2rem] transition-all transform hover:scale-110 active:scale-95 shadow-[0_0_30px_rgba(34,197,94,0.6)] animate-heartbeat font-pacifico z-20 border-4 border-white/20"
+            className="absolute left-1/2 -translate-x-1/2 px-12 h-20 md:h-24 text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-[2rem] transition-all transform hover:scale-125 active:scale-95 shadow-[0_0_30px_rgba(34,197,94,0.6)] animate-heartbeat font-pacifico z-20 border-4 border-white/20 hover:rotate-3"
           >
             YES 😍
           </Button>
@@ -233,12 +237,12 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
             onMouseEnter={handleNoHover}
             onTouchStart={handleNoHover}
             onClick={handleNoClick}
-            className="fixed px-6 h-12 md:h-14 text-base md:text-lg font-bold bg-slate-800 hover:bg-slate-700 text-slate-400 rounded-2xl transition-all duration-300 ease-out z-10 font-pacifico border border-slate-600"
+            className="fixed px-6 h-12 md:h-14 text-base md:text-lg font-bold bg-slate-800 hover:bg-slate-700 text-slate-400 rounded-2xl transition-all duration-200 ease-out z-50 font-pacifico border border-slate-600 hover:rotate-12 hover:scale-75"
             style={{
               left: noButtonPos.x === 0 ? 'auto' : `${noButtonPos.x}px`,
               top: noButtonPos.y === 0 ? 'auto' : `${noButtonPos.y}px`,
               pointerEvents: 'auto',
-              transform: noButtonPos.x === 0 && noButtonPos.y === 0 ? 'translateX(120%)' : 'none',
+              transform: noButtonPos.x === 0 && noButtonPos.y === 0 ? 'translateX(120%)' : `rotate(${Math.random() * 360}deg)`,
             }}
           >
             NO 😏
