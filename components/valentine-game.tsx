@@ -217,7 +217,7 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
       <div className="bg-black/60 rounded-[2.5rem] shadow-[0_0_40px_rgba(255,0,0,0.4)] p-8 md:p-12 backdrop-blur-md border border-red-500/30 relative overflow-hidden transition-all duration-500 hover:shadow-[0_0_60px_rgba(255,0,0,0.6)]">
         <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-red-900/20 pointer-events-none"></div>
 
-        <h1 className="relative text-5xl md:text-6xl font-bold text-white text-center mb-12 font-pacifico drop-shadow-[0_0_10px_rgba(255,0,0,0.8)] leading-tight animate-wobble">
+        <h1 className="relative text-5xl md:text-6xl font-bold text-white text-center mb-12 font-pacifico drop-shadow-[0_0_10px_rgba(255,0,0,0.8)] leading-tight">
           Will you be my Valentine, <br /> {theirName}? 🌹
         </h1>
 
