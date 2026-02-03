@@ -15,9 +15,77 @@ const pacifico = Pacifico({
 });
 
 export const metadata: Metadata = {
-  title: 'My Valentine',
-  description: 'A romantic interactive proposal',
-  generator: 'Tech Trade Enterprise',
+  title: {
+    default: 'My Valentine ❤️ - Create a Romantic Proposal',
+    template: '%s | My Valentine',
+  },
+  description: 'Create a beautiful interactive Valentine proposal for your loved one. Send a romantic message with animated hearts, music, and a special question - Will you be my Valentine? 💕',
+  keywords: [
+    'valentine',
+    'valentine proposal',
+    'be my valentine',
+    'romantic proposal',
+    'love proposal',
+    'valentine game',
+    'valentine message',
+    'valentine card',
+    'love game',
+    'romantic game',
+    'valentine 2026',
+    'propose your crush',
+    'valentine gift',
+    'interactive valentine',
+  ],
+  authors: [{ name: 'Tech Trade Enterprises', url: 'https://www.techtradeenterprises.site/' }],
+  creator: 'Tech Trade Enterprises',
+  publisher: 'Tech Trade Enterprises',
+  generator: 'Next.js',
+  applicationName: 'My Valentine',
+  referrer: 'origin-when-cross-origin',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://valentine.techtradeenterprises.site'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://valentine.techtradeenterprises.site',
+    siteName: 'My Valentine',
+    title: 'My Valentine ❤️ - Create a Romantic Proposal',
+    description: 'Create a beautiful interactive Valentine proposal for your loved one. Will you be my Valentine? 💕',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'My Valentine - Romantic Proposal Game',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'My Valentine ❤️ - Create a Romantic Proposal',
+    description: 'Create a beautiful interactive Valentine proposal for your loved one. Will you be my Valentine? 💕',
+    images: ['/opengraph-image.png'],
+    creator: '@techtradeent',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  category: 'entertainment',
 }
 
 export default function RootLayout({
@@ -28,7 +96,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans antialiased ${pacifico.variable}`}>
-        <CursorTrail />
         {children}
         <Footer />
         <Analytics />
