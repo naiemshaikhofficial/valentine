@@ -17,7 +17,7 @@ const pacifico = Pacifico({
 export const metadata: Metadata = {
   title: 'My Valentine',
   description: 'A romantic interactive proposal',
-  generator: 'v0.app',
+  generator: 'Tech Trade Enterprise',
 }
 
 export default function RootLayout({
