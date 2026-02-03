@@ -122,6 +122,10 @@ export default function RootLayout({
           src="https://www.highperformanceformat.com/a312ee5a7123e48f0caec721b17ee484/invoke.js"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://www.effectivegatecpm.com/tim2a3ye?key=e85d1ed6bb5c2ea1c58694c849c3e0ea"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
