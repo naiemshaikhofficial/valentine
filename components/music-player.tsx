@@ -12,8 +12,8 @@ export default function MusicPlayer() {
     // Using a reliable sample URL or placeholder. 
     // For now using a common placeholder that would work in a demo context. 
     // User can replace with their specific file.
-    // Royalty-free romantic music (Kai Engel - Sentinel)
-    const MUSIC_URL = "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Kai_Engel/Satin/Kai_Engel_-_04_-_Sentinel.mp3";
+    // Romantic Piano Music from Pixabay (Free)
+    const MUSIC_URL = "https://cdn.pixabay.com/audio/2022/02/22/audio_d1718ab41b.mp3";
 
     useEffect(() => {
         // Auto-play attempt on mount (often blocked by browser policy without interaction)

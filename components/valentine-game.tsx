@@ -82,11 +82,11 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
           {/* Dark Red Glow Background */}
           <div className="absolute inset-0 bg-gradient-to-b from-red-600/10 to-transparent pointer-events-none"></div>
 
-          <div className="mb-6 animate-pulse">
-            <span className="text-8xl filter drop-shadow-[0_0_10px_rgba(255,0,0,0.8)]">💌</span>
+          <div className="mb-6 animate-bounce">
+            <span className="text-8xl filter drop-shadow-[0_0_20px_rgba(255,0,0,0.8)] inline-block animate-pulse-heart">💌</span>
           </div>
 
-          <h2 className="text-3xl md:text-3xl font-bold text-white mb-6 font-pacifico drop-shadow-lg leading-relaxed min-h-[120px]">
+          <h2 className="text-3xl md:text-3xl font-bold text-white mb-6 font-pacifico drop-shadow-lg leading-relaxed min-h-[120px] animate-text-glow">
             <TypingText
               text={`${theirName}, someone very special has a question for you...`}
               speed={50}
@@ -113,7 +113,7 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
       <div className="relative w-full max-w-xl z-10 animate-in fade-in slide-in-from-bottom-10 duration-700">
         <FloatingHearts count={30} />
         <div className="bg-black/60 rounded-[2.5rem] shadow-[0_0_50px_rgba(255,0,0,0.5)] p-8 md:p-12 backdrop-blur-xl border border-red-500/40 text-center relative overflow-hidden">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 font-pacifico animate-glow">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 font-pacifico animate-text-glow">
             Calculating Love Compatibility...
           </h2>
 

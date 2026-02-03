@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import ValentineSetup from '@/components/valentine-setup';
 import ValentineGame from '@/components/valentine-game';
 import MusicPlayer from '@/components/music-player';
+import SparkleEffect from '@/components/sparkle-effect';
 
 export default function Home() {
   const [gameState, setGameState] = useState<'setup' | 'game'>('setup');
@@ -35,6 +36,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-black via-red-950 to-red-900 animate-gradient-bg bg-size-200 flex items-center justify-center p-4 overflow-hidden relative">
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 pointer-events-none"></div>
+      <SparkleEffect />
       <MusicPlayer />
       {gameState === 'setup' ? (
         <ValentineSetup onStartGame={handleStartGame} />

@@ -107,6 +107,21 @@ export default function RootLayout({
           src="https://pl28637645.effectivegatecpm.com/9b/e2/9d/9be29d89b60a109893e967eaeee35f51.js"
           strategy="afterInteractive"
         />
+        <Script id="ad-options" strategy="beforeInteractive">
+          {`
+            atOptions = {
+              'key' : 'a312ee5a7123e48f0caec721b17ee484',
+              'format' : 'iframe',
+              'height' : 60,
+              'width' : 468,
+              'params' : {}
+            };
+          `}
+        </Script>
+        <Script
+          src="https://www.highperformanceformat.com/a312ee5a7123e48f0caec721b17ee484/invoke.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
