@@ -36,6 +36,10 @@ export default function RootLayout({
           src="https://pl28637525.effectivegatecpm.com/2c/74/0b/2c740b528a099dd9fc695ef846abdf8c.js"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://pl28637645.effectivegatecpm.com/9b/e2/9d/9be29d89b60a109893e967eaeee35f51.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
