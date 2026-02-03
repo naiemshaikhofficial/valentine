@@ -41,7 +41,7 @@ export default function ValentineSetup({ onStartGame }: ValentineSetupProps) {
     <div className="relative w-full max-w-lg z-10 animate-bounce-in">
       <FloatingHearts count={25} />
 
-      <div className="bg-black/40 backdrop-blur-xl rounded-[2.5rem] shadow-[0_0_40px_rgba(180,0,0,0.5)] border border-red-500/30 p-8 md:p-10 text-center relative overflow-hidden">
+      <div className="bg-black/40 backdrop-blur-xl rounded-[1.5rem] md:rounded-[2.5rem] shadow-[0_0_40px_rgba(180,0,0,0.5)] border border-red-500/30 p-5 md:p-10 text-center relative overflow-hidden">
         {/* Glow Effects */}
         <div className="absolute inset-0 bg-gradient-to-b from-red-500/10 to-transparent pointer-events-none"></div>
         <div className="absolute -top-20 -left-20 w-40 h-40 bg-red-600/30 blur-[60px] rounded-full pointer-events-none"></div>
@@ -50,21 +50,21 @@ export default function ValentineSetup({ onStartGame }: ValentineSetupProps) {
         <div className="relative z-10">
           <div className="mb-6 flex justify-center">
             <div className="relative">
-              <span className="text-7xl animate-pulse-heart filter drop-shadow-[0_0_15px_rgba(255,0,0,0.8)]">❤️</span>
+              <span className="text-5xl md:text-7xl animate-pulse-heart filter drop-shadow-[0_0_15px_rgba(255,0,0,0.8)]">❤️</span>
               <Stars className="absolute -top-2 -right-4 text-yellow-400 w-8 h-8 animate-pulse" />
             </div>
           </div>
 
           {!generatedLink ? (
             <>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 font-pacifico animate-glow">
+              <h1 className="text-3xl md:text-5xl font-bold text-white mb-2 md:mb-3 font-pacifico animate-glow">
                 Love Game ❤️
               </h1>
-              <p className="text-xl text-red-200 font-medium mb-8 font-pacifico opacity-90">
+              <p className="text-base md:text-xl text-red-200 font-medium mb-5 md:mb-8 font-pacifico opacity-90">
                 Someone has a special message for you...
               </p>
 
-              <div className="space-y-5">
+              <div className="space-y-3 md:space-y-5">
                 <div className="bg-black/30 p-1 rounded-2xl border border-red-500/20 shadow-inner">
                   <Input
                     placeholder="Your Name"
@@ -86,7 +86,7 @@ export default function ValentineSetup({ onStartGame }: ValentineSetupProps) {
                 <Button
                   onClick={generateLink}
                   disabled={!myName || !theirName}
-                  className="w-full h-14 rounded-2xl text-xl font-bold bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white shadow-[0_0_20px_rgba(255,0,0,0.4)] hover:shadow-[0_0_30px_rgba(255,0,0,0.6)] transition-all transform hover:scale-[1.02] border border-red-400/30 font-pacifico animate-heartbeat disabled:opacity-50 disabled:animate-none"
+                  className="w-full h-12 md:h-14 rounded-2xl text-lg md:text-xl font-bold bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white shadow-[0_0_20px_rgba(255,0,0,0.4)] hover:shadow-[0_0_30px_rgba(255,0,0,0.6)] transition-all transform hover:scale-[1.02] active:scale-95 border border-red-400/30 font-pacifico animate-heartbeat disabled:opacity-50 disabled:animate-none"
                 >
                   Generate Love Link 🚀
                 </Button>

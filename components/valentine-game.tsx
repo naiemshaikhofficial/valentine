@@ -83,10 +83,10 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
           <div className="absolute inset-0 bg-gradient-to-b from-red-600/10 to-transparent pointer-events-none"></div>
 
           <div className="mb-6 animate-bounce">
-            <span className="text-8xl filter drop-shadow-[0_0_20px_rgba(255,0,0,0.8)] inline-block animate-pulse-heart">💌</span>
+            <span className="text-6xl md:text-8xl filter drop-shadow-[0_0_20px_rgba(255,0,0,0.8)] inline-block animate-pulse-heart">💌</span>
           </div>
 
-          <h2 className="text-3xl md:text-3xl font-bold text-white mb-6 font-pacifico drop-shadow-lg leading-relaxed min-h-[120px] animate-text-glow">
+          <h2 className="text-xl md:text-3xl font-bold text-white mb-4 md:mb-6 font-pacifico drop-shadow-lg leading-relaxed min-h-[80px] md:min-h-[120px] animate-text-glow">
             <TypingText
               text={`${theirName}, someone very special has a question for you...`}
               speed={50}
@@ -97,7 +97,7 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
           <div className={`transition-opacity duration-1000 ${introTyped ? 'opacity-100' : 'opacity-0'}`}>
             <Button
               onClick={() => setCurrentStep('compatibility')}
-              className="w-full h-14 rounded-2xl text-xl font-bold bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white shadow-[0_0_20px_rgba(255,0,0,0.5)] transition-all transform hover:scale-105 font-pacifico animate-pulse"
+              className="w-full h-12 md:h-14 rounded-2xl text-lg md:text-xl font-bold bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white shadow-[0_0_20px_rgba(255,0,0,0.5)] transition-all transform hover:scale-105 active:scale-95 font-pacifico animate-pulse"
             >
               Open Message 💝
             </Button>
@@ -113,26 +113,26 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
       <div className="relative w-full max-w-xl z-10 animate-in fade-in slide-in-from-bottom-10 duration-700">
         <FloatingHearts count={30} />
         <div className="bg-black/60 rounded-[2.5rem] shadow-[0_0_50px_rgba(255,0,0,0.5)] p-8 md:p-12 backdrop-blur-xl border border-red-500/40 text-center relative overflow-hidden">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 font-pacifico animate-text-glow">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-6 md:mb-8 font-pacifico animate-text-glow">
             Calculating Love Compatibility...
           </h2>
 
-          <div className="relative w-48 h-48 mx-auto mb-8 flex items-center justify-center">
+          <div className="relative w-32 h-32 md:w-48 md:h-48 mx-auto mb-6 md:mb-8 flex items-center justify-center">
             {/* Heart Outline */}
             <Heart className="w-full h-full text-red-900/30 fill-red-900/20 absolute inset-0" />
 
             {/* Filling Heart */}
             <div className="absolute inset-0 overflow-hidden flex items-end justify-center" style={{ height: `${compatibility}%`, transition: 'height 0.1s ease-out' }}>
-              <Heart className="w-48 h-48 text-red-600 fill-red-600 absolute bottom-0 filter drop-shadow-[0_0_20px_rgba(255,0,0,0.6)]" />
+              <Heart className="w-32 h-32 md:w-48 md:h-48 text-red-600 fill-red-600 absolute bottom-0 filter drop-shadow-[0_0_20px_rgba(255,0,0,0.6)]" />
             </div>
 
             {/* Percentage Text */}
-            <span className="relative z-10 text-4xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-pacifico">
+            <span className="relative z-10 text-3xl md:text-4xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-pacifico">
               {compatibility}%
             </span>
           </div>
 
-          <p className="text-2xl text-red-200 font-medium min-h-[2rem] font-pacifico animate-pulse">
+          <p className="text-lg md:text-2xl text-red-200 font-medium min-h-[2rem] font-pacifico animate-pulse">
             {compatibility < 30 && "Measuring vibes..."}
             {compatibility >= 30 && compatibility < 70 && "Heartbeats syncing..."}
             {compatibility >= 70 && compatibility < 100 && "Detecting True Love..."}
@@ -150,14 +150,14 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
         <FloatingHearts count={60} />
         <CelebrationEffects />
 
-        <div className="bg-black/70 rounded-[2rem] shadow-[0_0_60px_rgba(255,0,0,0.6)] p-6 md:p-10 backdrop-blur-xl border-2 border-red-500/50 text-center relative overflow-hidden">
+        <div className="bg-black/70 rounded-[1.5rem] md:rounded-[2rem] shadow-[0_0_60px_rgba(255,0,0,0.6)] p-5 md:p-10 backdrop-blur-xl border-2 border-red-500/50 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 to-pink-600/20 pointer-events-none animate-pulse"></div>
 
           <div className="mb-6 animate-bounce-in relative">
-            <span className="text-8xl inline-block animate-pulse-heart drop-shadow-[0_0_25px_rgba(255,0,0,1)] text-red-500">❤️</span>
+            <span className="text-6xl md:text-8xl inline-block animate-pulse-heart drop-shadow-[0_0_25px_rgba(255,0,0,1)] text-red-500">❤️</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-red-500 mb-6 font-pacifico drop-shadow-[0_0_15px_rgba(255,0,0,0.8)] pb-2 animate-bounce">
+          <h1 className="text-4xl md:text-7xl font-bold text-red-500 mb-4 md:mb-6 font-pacifico drop-shadow-[0_0_15px_rgba(255,0,0,0.8)] pb-2 animate-bounce">
             I LOVE YOU! 💖
           </h1>
 
@@ -214,19 +214,19 @@ export default function ValentineGame({ myName, theirName, shareUrl }: Valentine
     >
       <FloatingHearts count={50} />
 
-      <div className="bg-black/60 rounded-[2.5rem] shadow-[0_0_40px_rgba(255,0,0,0.4)] p-8 md:p-12 backdrop-blur-md border border-red-500/30 relative overflow-hidden transition-all duration-500 hover:shadow-[0_0_60px_rgba(255,0,0,0.6)]">
+      <div className="bg-black/60 rounded-[1.5rem] md:rounded-[2.5rem] shadow-[0_0_40px_rgba(255,0,0,0.4)] p-5 md:p-12 backdrop-blur-md border border-red-500/30 relative overflow-hidden transition-all duration-500 hover:shadow-[0_0_60px_rgba(255,0,0,0.6)]">
         <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-red-900/20 pointer-events-none"></div>
 
-        <h1 className="relative text-5xl md:text-6xl font-bold text-white text-center mb-12 font-pacifico drop-shadow-[0_0_10px_rgba(255,0,0,0.8)] leading-tight">
+        <h1 className="relative text-3xl md:text-6xl font-bold text-white text-center mb-8 md:mb-12 font-pacifico drop-shadow-[0_0_10px_rgba(255,0,0,0.8)] leading-tight">
           Will you be my Valentine, <br /> {theirName}? 🌹
         </h1>
 
         {/* Buttons container */}
-        <div className="relative h-48 flex items-center justify-center gap-6 md:gap-8">
+        <div className="relative h-36 md:h-48 flex items-center justify-center gap-4 md:gap-8">
           {/* Yes Button */}
           <Button
             onClick={handleYesClick}
-            className="absolute left-1/2 -translate-x-1/2 px-12 h-20 md:h-24 text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-[2rem] transition-all transform hover:scale-125 active:scale-95 shadow-[0_0_30px_rgba(34,197,94,0.6)] animate-heartbeat font-pacifico z-20 border-4 border-white/20 hover:rotate-3"
+            className="absolute left-1/2 -translate-x-1/2 px-8 md:px-12 h-16 md:h-24 text-2xl md:text-4xl font-bold bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-[1.5rem] md:rounded-[2rem] transition-all transform hover:scale-110 active:scale-95 shadow-[0_0_30px_rgba(34,197,94,0.6)] animate-heartbeat font-pacifico z-20 border-4 border-white/20 hover:rotate-3"
           >
             YES 😍
           </Button>
